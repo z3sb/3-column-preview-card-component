@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  padding: 50px 0;
+}
+.container{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  height: 80%;
+}
+.container .card {
+  padding: 50px;
+  position: relative;
+  height: 100%
+}
+.container .card .text{
+  width: 90%;
+}
+.container .card:first-of-type{
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 5px 0 0 5px;
+}
+.container .card:nth-child(2){
+  background-color: hsl(184, 100%, 22%);
+}
+.container .card:last-of-type{
+  background-color:hsl(179, 100%, 13%);
+  border-radius: 0 5px 5px 0;
+}
+.container .card img{
+  margin-bottom: 30px;
+}
+.container .card  h1{
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+.container .card p{
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 80px;
+  line-height: 1.5;
+}
+.container .card button{
+  padding:10px 30px;
+  background-color: transparent;
+  border-radius: 25px;
+  border: 2px solid white;
+  position: absolute;
+  bottom: 40px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3;
+}
+
+.container .card:first-of-type button:hover{
+  color: hsl(31, 77%, 52%);
+  background-color: white;
+}
+.container .card:nth-child(2) button:hover{
+  color: hsl(184, 100%, 22%);
+  background-color: white;
+}
+.container .card:last-of-type button:hover{
+  color:hsl(179, 100%, 13%);
+  background-color: white;
+}
+@media (max-width:375px){
+  .container{
+    place-items: center ;
+  }
+  .container .card {
+    width: 88%;
+  }
+  .container .card:first-of-type{
+    border-radius: 5px 5px 0 0;
+  }
+  .container .card:last-of-type{
+    border-radius: 0 0 5px 5px;
+  }
+}
